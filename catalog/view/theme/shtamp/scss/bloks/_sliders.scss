@@ -1,0 +1,91 @@
+.slider {
+	position: relative;
+	margin-bottom: 66px;
+
+	&-instagram {
+		margin-top: 74px;
+	}
+
+	h2 {
+		font-size: 30px;
+		font-family: $f-default;
+		text-transform: uppercase;
+		margin-bottom: 42px;
+		@include sm-block{
+			font-size: 28px;
+		}
+	}
+
+	&__slide {
+		margin: 0 $offset_one_side;
+	}
+
+	.slick-arrow {
+		position: absolute;
+		top: -68px;
+		right: 5px;
+		font-size: 16px;
+		transition: .3s;
+
+		&:hover {
+			cursor: pointer;
+			color: #f1634b;
+		}
+	}
+
+	.icon-arrow-left {
+		right: 30px;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&-works-main {
+		margin-top: 43px;
+		margin-bottom: 90px;
+	}
+
+	&-inst-main {
+		margin-top: 74px;
+		margin-bottom: 100px;
+	}
+
+	&-bg {
+		background: #92cf5d;
+		margin-left: -$offset;
+		padding-top: 35px;
+		padding-bottom: 35px;
+		padding-left: $offset;
+		margin-right: -$offset;
+		padding-right: $offset;
+		@include sm-block{
+			margin-left: 0px;
+			padding-left: 20px;
+			margin-right: 0;
+		}
+
+		.slick-arrow {
+			position: absolute;
+			top: -83px;
+			font-size: 16px;
+			transition: .3s;
+			background: #fff;
+			border-radius: 100%;
+			padding: 10px;
+
+			&.icon-arrow-left {
+				right: 50px;
+			}
+
+			&:hover {
+				cursor: pointer;
+				color: #f1634b;
+			}
+		}
+	}
+}
+
+.slider-container {
+	margin: 0 -8px;
+}

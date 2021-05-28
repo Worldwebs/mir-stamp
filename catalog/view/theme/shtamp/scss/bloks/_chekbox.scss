@@ -1,0 +1,57 @@
+.checkout-checkout input[type=checkbox],
+.checkout-checkout input[type=radio],
+input[type=checkbox],
+input[type=radio] {
+	display: none;
+}
+input[type=checkbox]+i,
+input[type=radio]+i {
+	position: relative;
+	margin-right: 10px;
+	display: inline-block;
+	width: 18px;
+	height: 18px;
+	vertical-align: middle;
+	cursor: pointer;
+	border: 2px solid #d1d1d1;
+	border-radius: 2px;
+	background: #fff;
+}
+input[type=radio]+i {
+	border-radius: 50%;
+}
+input[type=checkbox]:checked+i:before,
+input[type=radio]:checked+i:before {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+input[type=checkbox]+i:before,
+input[type=radio]+i:before {
+	content: "";
+	position: absolute;
+	background: #364156;
+	padding: 8px;
+	border-radius: 0;
+	top: 1px;
+	left: 1px;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	transition: .3s;
+}
+input[type=radio]+i:before {
+	border-radius: 50%;
+}
+
+.mfilter-option.mfilter-image input,
+.mfilter-option.mfilter-image i {
+	display: none;
+}
+.checkbox label, .radio label {
+	position: relative;
+	padding: 0;
+}
+
+.checkout-checkout .checkbox label,
+.checkout-checkout .radio label {
+	padding-left: 20px;
+}

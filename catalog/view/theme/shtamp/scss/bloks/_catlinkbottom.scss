@@ -1,0 +1,43 @@
+.catlinkbottom {
+	@include row-flex();
+
+	&__item {
+		@include col();
+		@include size(3);
+		@include size-md(6);
+		@include size-xs(12);
+		font-size: 16px;
+		margin-bottom: 30px;
+
+		h3 {
+			text-transform: uppercase;
+			font-family: $font-medium;
+			margin-bottom: 25px;
+			font-size: 100%;
+
+			&:after {
+				content: '';
+				background: #f0811a;
+				width: 40px;
+				height: 2px;
+				position: absolute;
+				left: 0;
+				bottom: -10px;
+			}
+		}
+
+		a {
+			color: #364156;
+			margin-bottom: 5px;
+			display: inline-block;
+
+			&:hover {
+				color: #6EBEB3;
+			}
+		}
+	}
+
+	&__item:first-child {
+		display: none;
+	}
+}

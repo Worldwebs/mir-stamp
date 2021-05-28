@@ -1,0 +1,151 @@
+.produt-in-cart-item {
+	&--product {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		border-bottom: 1px solid #e3e4e6;
+		margin-bottom: 15px;
+		padding-bottom: 5px;
+	}
+
+	&__img {
+		margin-right: 15px;
+	}
+
+	&__name {
+		width: 20%;
+	}
+
+	&__button {
+		margin-right: 10px;
+		background: transparent;
+		border: 0;
+
+		i {
+			color:red;
+			font-size: 16px;
+			transition: .3s;			
+
+			&:hover {
+				color: #94CF5D;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+.cart-rezult {
+	display: flex;
+	justify-content: space-between;
+
+	&__title {
+		font-family: $font-medium;
+		margin-bottom: 5px;
+	}
+
+	&__text {
+		color: red;
+	}
+}
+
+#accordion {
+	margin-top: 25px;
+
+}
+
+.panel-heading {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+.panel-group .panel {
+	border-radius: 0;
+}
+
+.panel-default > .panel-heading {
+	color: #333;
+	background-color: #e5e9f199;
+	border-color: #ddd;
+}
+
+.input-group .form-control {
+	width: 50px;
+	border-radius: 0;
+}
+
+.messages {
+	margin-bottom: 40px;
+
+	&__message {
+		margin-bottom: 20px;
+	}
+}
+
+.ordering {
+	@include row-flex();
+
+	&__item {
+		@include col();
+		@include size(6);
+		@include size-xs(12);
+	}
+}
+
+div.required .control-label:before {
+	content: '* ';
+	color: #F00;
+	font-weight: bold;
+}
+
+.buttons {
+	display: flex;
+	justify-content: center;
+	
+	.button {
+		margin-top: 25px;
+	}
+}
+
+.title-cart {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #e3e4e6;
+	margin-bottom: 15px;
+
+	h2 {
+		margin-right: 20px;
+	}
+}
+
+.close {
+	border-radius: 50%;
+	border: 1px solid transparent;
+	background: red;
+	color: #fff;
+	height: 20px;
+	width: 20px;
+
+	&:hover {
+		cursor: pointer;
+		background: #fff;
+		color: red;
+		border: 1px solid red;
+	}
+}
+
+#simplecheckout_cart .form-control {
+	width: 50px;
+}
+.quantity div .btn-danger,
+.quantity div .btn-primary {
+	border: 0;
+	background-color: transparent;
+}
+.icon-trash {
+	color: red;
+	font-size: 16px;
+	transition: .3s;
+}
+.simplecheckout-cart i {
+	cursor: pointer;
+}

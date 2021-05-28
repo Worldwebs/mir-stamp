@@ -1,0 +1,9 @@
+@import "_mixins/font-face";
+
+@include font-face("aktiv-grotesk-light", "../fonts/AktivGroteskCorpLight/AktivGroteskCorpLight");
+@include font-face("aktiv-grotesk-regular", "../fonts/AktivGroteskCorpRegular/AktivGroteskCorpRegular");
+@include font-face("aktiv-grotesk-corp-medium", "../fonts/AktivGroteskCorpMedium/AktivGroteskCorpMedium");
+@include font-face("aktiv-grotesk-corp-bold", "../fonts/AktivGroteskCorpBold/AktivGroteskCorpBold");
+
+@include font-face("roboto-light", "../fonts/RobotoLight/RobotoLight");
+@include font-face("roboto-thin", "../fonts/RobotoThin/RobotoThin");

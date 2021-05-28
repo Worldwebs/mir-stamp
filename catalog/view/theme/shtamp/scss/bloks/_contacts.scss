@@ -1,0 +1,134 @@
+.message {
+	@include row-flex();
+	margin-bottom: 94px;
+	margin-top: 30px;
+
+	.contacts,
+	.form {
+		@include col-padding();
+		@include size(6);
+		@include size-xs(12);
+	}
+
+	.contacts {
+		margin-left: $offset_one_side;
+		padding-left: 0;
+		@include xs(order, 2);
+	}
+
+	.form {
+		margin-right: $offset_one_side;
+		padding-right: 0;
+		@include xs(order, 1);
+		@include xs-block{
+			margin-left: $offset_one_side;
+			padding-left: 0;
+		}
+	}
+}
+
+.contacts,
+.form {
+	h2 {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+}
+
+.contacts {
+	background: #f0f0f5;
+	padding-top: 42px;
+	padding-bottom: 12px;
+
+	h2 {
+		margin-left: 42px;
+		margin-bottom: 30px;
+		@include sm-block{
+			margin-left: 20px;
+		}
+	}
+
+	&__contact {
+		padding: 0 42px 25px 80px;
+		position: relative;
+		@include sm-block{
+			padding: 0 42px 25px 60px;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		i {
+			color: #f1634b;
+			font-size: 24px;
+			position: absolute;
+			left: 41px;
+			top: 0;
+			@include sm-block{
+				left: 20px;
+			}
+		}
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		.name {
+			text-transform: uppercase;
+			font-family: $font-medium;
+		}
+	}
+}
+
+.form {
+	background: #aea9c7;
+
+	.wr {
+		padding: 42px 60px 42px 50px;
+		@include sm-block{
+			padding: 20px 20px 20px 20px;
+		}
+	}
+
+	h2 {
+		color: #fff;
+	}
+
+	&__error {
+		font-size: 16px;
+	}
+
+	&__group {
+		margin-top: 20px;
+		font-size: 16px;
+		@include sm-block{
+			margin-top: 20px;
+		}
+
+		label {
+			text-transform: uppercase;
+			color: #fff;
+			margin-bottom: 11px;
+			display: block;
+			font-size: 14px;
+		}
+
+		input, textarea, select {
+			width: 100%;
+		}
+	}
+
+	&__confid {
+		display: flex;
+		margin: 24px 0;
+
+		a {
+			color: #364156;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}

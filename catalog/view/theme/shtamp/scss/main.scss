@@ -1,0 +1,162 @@
+@import "vars";
+@import "fonts";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+@import "simple-line-icons";
+@import "font-awesome.min";
+@import "smartgrid";
+@import "libs";
+@import "stacktable";
+@import "mfp-zoom-in";
+
+
+@include reset();
+
+html, body {
+	height: 100%;
+}
+
+body {
+	font-size: 16px;
+	position: relative;
+	line-height: 1.65;
+	overflow-x: hidden;
+	font-family: $font-regular;
+	color: #364156;
+}
+
+a {
+	transition: .3s;
+	color: #6ebeb3;
+	text-decoration: none;
+	transition: .3s;
+
+	&:hover {
+		text-decoration: none;
+		color: #6EBEB3;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $f-default;
+	position: relative;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+
+h2 {
+	font-size: 28px;
+	margin-bottom: 8px;
+}
+
+h3 {
+	font-size: 24px;
+	margin-bottom: 6px;
+}
+
+h4 {
+	font-size: 22px;
+	margin-bottom: 4px;
+}
+
+.container {
+	@include container();
+}
+
+.mainrow {
+	@include row-flex();
+}
+
+.sidebar,
+.content {
+	@include col();
+}
+
+@import "bloks/sidebar";
+
+.content {
+	@include size(10);
+	@include size-xl(9);
+	@include size-sm(12);
+	padding-top: 20px;
+
+	@include sm-block {
+		padding-right: 0;
+	}
+}
+
+@import "bloks/catnavig";
+@import "bloks/worksitems";
+@import "bloks/catitems";
+@import "bloks/catlist";
+@import "bloks/breadcrumb";
+@import "bloks/itemtextimg";
+@import "bloks/itemtextimg-link";
+@import "bloks/sliders";
+@import "bloks/tables";
+@import "bloks/contacts";
+@import "bloks/catlinkbottom";
+@import "bloks/buttons";
+@import "bloks/chekbox";
+@import "bloks/popup";
+@import "bloks/produts-in-cart";
+@import "bloks/search";
+@import "bloks/forms";
+@import "bloks/how-zakaz";
+@import "bloks/filter";
+
+
+.pagination {
+	display: flex;
+	justify-content: center;
+
+	&__item a,
+	&__item-active span {
+		width: 30px;
+		height: 30px;
+		margin: 0 5px;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		background: #364156;
+		color: #fff;
+		transition: .3s;
+	}
+
+	&__item-active span {
+		background: #F1634B;
+	}
+
+	&__item a:hover {
+		background: #F1634B;
+	}
+}
+
+.pagination-results {
+	margin-bottom: 20px;
+}
+
+.description-text {
+	margin-bottom: 40px;
+}
+
+.fade {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(54, 65, 86, 0.61);
+	top: 0;
+}
+
+#simplecheckout_shipping {
+	display: none;
+}
+
+.categoryshop {
+	.categoryshop__h1 {
+		display: none;
+	}
+}

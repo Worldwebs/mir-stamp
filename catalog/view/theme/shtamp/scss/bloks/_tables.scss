@@ -1,0 +1,288 @@
+.price {
+	margin-bottom: 20px;
+}
+
+.table {
+  border: 1px solid #dee2e6;
+  width: 100%;
+  @include sm-block{
+  	font-size: 14px;
+  }
+  @include xs-block{
+  	font-size: 12px;
+  }
+  @include xxs-block{
+  	font-size: 8px;
+  }
+
+  td,
+  th {
+  	border: 1px solid #dee2e6;
+  	padding: .5rem;
+  	transition: .3s;
+  	@include xs-block{
+  		padding: .2rem;
+  	}
+  	@include xxs-block{
+  		padding: .1rem;
+  	}
+  }
+
+  td {
+  	text-align: right;
+  }
+
+  th {
+  	font-family: aktiv-grotesk-corp-medium,sans-serif;
+  }  
+
+  tr:nth-of-type(2n+1) {
+  	background-color: #f1edff;
+  }
+
+  tr:hover {
+  	background: #eee9ff;
+  	cursor: pointer;
+  	transition: .3s;
+  }
+}
+
+.prise-box {
+	margin: 30px 0;
+
+	&-color1 {		
+		.prise-box__title {
+			background: #F1634B;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #F1634B;
+		}
+	}
+
+	&-color2 {		
+		.prise-box__title {
+			background: #356768;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #356768;
+		}
+	}
+
+	&-color3 {		
+		.prise-box__title {
+			background: #9A0000;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #9A0000;
+		}
+	}
+
+	&-color4 {		
+		.prise-box__title {
+			background: #0000FE;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #0000FE;
+		}
+	}
+
+	&-color5 {		
+		.prise-box__title {
+			background: #3B1163;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #3B1163;
+		}
+	}
+
+	&-color6 {		
+		.prise-box__title {
+			background: #006533;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #006533;
+		}
+	}
+
+	&-color7 {
+		.prise-box__title {
+			background: #FF0066;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #FF0066;
+		}
+	}
+
+	&-color8 {
+		.prise-box__title {
+			background: #965A96;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #965A96;
+		}
+	}
+
+	&-color9 {
+		.prise-box__title {
+			background: #00349A;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #00349A;
+		}
+	}
+
+	&-color10 {
+		.prise-box__title {
+			background: #23AB23;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #23AB23;
+		}
+	}
+
+	&-color11 {
+		.prise-box__title {
+			background: #013334;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #013334;
+		}
+	}
+
+	&-color12 {
+		.prise-box__title {
+			background: #9A01CE;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #9A01CE;
+		}
+	}
+
+	&-color13 {
+		.prise-box__title {
+			background: #CD9933;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #CD9933;
+		}
+	}
+
+	&-color14 {
+		.prise-box__title {
+			background: #FF00FE;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #FF00FE;
+		}
+	}
+
+	&-color15 {
+		.prise-box__title {
+			background: #239999;
+		}
+		.prise-wr-table__title,
+		.prise-wr-table__title2 {
+			color: #239999;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: #fff;
+		padding: 10px 30px;
+		font-size: 28px;
+		font-family: roboto-light,sans-serif;
+		margin-bottom: 30px;
+		background: #364156;
+		@include xs-block{
+			font-size: 18px;
+			line-height: 1.2;
+			padding: 5px 15px;
+			margin-bottom: 15px;
+		}
+		@include xxs-block{
+			margin-bottom: 5px;
+		}
+
+		span {
+			font-size: 16px;
+			display: block;
+			text-transform: none;
+			@include xs-block{
+				font-size: 10px;
+				margin-top: 3px;
+			}
+		}
+	}
+}
+
+.prise-wr-table {
+	margin-bottom: 30px;
+	@include xs-block{
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		background: #CDCDFF;
+		padding: 5px 15px;
+		font-size: 18px;
+		font-family: $font-medium;
+		display: inline-block;
+		margin-bottom: 20px;
+		text-transform: uppercase;
+		@include xs-block{
+			font-size: 16px;
+			line-height: 1.2;
+			margin-bottom: 15px;
+		}
+		@include xs-block{
+			font-size: 12px;
+			margin-bottom: 10px;
+		}
+
+		span {
+			text-transform: none;
+		}	
+
+		&-w100 {
+			display: flex;
+
+			.right {
+				margin-left: auto;
+			}
+		}	
+	}
+
+	&__title2 {
+		color: red;
+		font-size: 18px;
+		text-transform: uppercase;
+		margin: 10px 0;
+		font-family: $font-medium;
+		@include xs-block{
+			font-size: 16px;
+			line-height: 1.2;
+		}
+		@include xs-block{
+			font-size: 12px;
+		}
+	}
+}
+
+table td.center {
+	text-align: center;
+}

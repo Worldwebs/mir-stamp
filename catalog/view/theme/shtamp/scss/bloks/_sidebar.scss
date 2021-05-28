@@ -1,0 +1,285 @@
+.sidebar {
+	@include size(2);
+	@include size-xl(3);
+	@include size-sm(12);
+	margin-left: 0;
+	background: #364156;
+	color: #fff;
+	font-size: 16px;
+	padding: 40px 35px 40px 42px;
+	z-index: 10;
+	@include lg(padding, 40px 15px 40px 15px);
+	@include sm-block {
+		padding: 20px 15px 20px 15px;
+		margin-left: $offset_one_side;
+	}
+
+	&-fixed {
+		position: fixed;
+		height: 100%;
+		@include md(position, relative);
+
+		@include sm-block {
+			display: flex;
+			align-items: center;
+		}
+	}
+}
+
+.sitename {
+	display: flex;
+	margin-bottom: 15px;
+	@include sm(margin-bottom, 0);
+	
+
+	&__name {
+		text-transform: uppercase;
+		margin-right: 20px;
+		letter-spacing: 1px;
+		color: #fff;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		@include xs-block {
+			letter-spacing: 0;
+		};
+
+		img {
+			max-width: 100px;
+			@include sm(width, 50px);
+		}
+	}
+
+	&__lang {
+		color: #fff;
+		text-decoration: none;
+
+		@include xs-block {
+			position: absolute;
+			right: 0;
+			top: 36px;
+		};
+	}
+}
+
+.btn-downlang {
+	transition: .3s;
+	position: relative;
+
+	&:hover {
+		cursor: pointer;
+		color: #6ebeb3;
+	}
+}
+
+.lang-list {
+	position: absolute;
+	background: #2a3344;
+	padding: 5px 10px;
+	min-width: 50px;
+	border-radius: 4px;
+	top: 33px;
+	opacity: 0;
+	transition: .3s;
+
+	&.open {
+		opacity: 1;
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		border: 10px solid transparent;
+		border-top: 0;
+		border-bottom: 11px solid #2a3344;
+		margin-left: -15%;
+		z-index: 600;
+		top: -10px;
+	}
+
+
+	a {
+		display: block;
+	}
+}
+
+.leftnav,
+.button-popup,
+.search {
+	@include sm-block{
+		display: none!important;
+	}
+}
+
+.leftnav {
+	margin-bottom: 54px;
+	@include sm-block{
+		order: 4;
+		margin-bottom: 22px;
+		margin-top: 40px;
+		margin-bottom: 0;
+	};
+
+	&__item {
+		text-transform: uppercase;
+		color: #fff;
+		text-decoration: none;
+		margin-bottom: 22px;
+		display: block;
+
+		@include md-block{
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+		}
+
+		&:hover {			
+			transition: .3s;
+			text-decoration: none;
+		}
+
+		span {
+			display: inline-block;
+			background: #94cf5d;
+			border-radius: 10px;
+			padding: 0 18px;
+			margin-left: 10px;
+			font-size: 12px;
+			color: #364156;
+			text-align: center;
+			height: 17px;
+		}
+	}
+
+	i {
+		color: #f1634b;
+		margin-right: 10px;
+		@include md(font-size, 22px);
+	}
+}
+
+.button-openmenu {
+	display: none;
+	align-items: center;
+	justify-content: flex-start;
+	@include sm(display, flex);
+
+	i {
+		color: #f1634b;
+		@include md(font-size, 22px);
+	}
+}
+
+.tell {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	color: #fff;
+	@include md(font-size, 14px);
+	@include sm-block{
+		align-self: auto;
+		position: absolute;
+		right: 0;
+	};
+
+	i {
+		color: #94cf5d;
+		font-size: 24px;
+		margin-right: 10px;
+		@include md(font-size, 18px);
+	}
+}
+
+.button-color1 {
+	margin-bottom: 30px;
+}
+
+.search {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #fff;
+	padding-bottom: 4px;
+
+	&__text {
+		background: transparent;
+		color: #fff;
+		font-size: 14px;
+		border: 0;
+		padding: 3px 0 3px 0;
+		@include md(width, 100%);
+
+		&::placeholder {
+			color: #fff;
+		}
+	}
+
+	&__button {
+		position: relative;
+
+		button {
+			background: 0 0;
+			border: 0;
+			width: 16px;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 1;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		i {
+			color: #f1634b;
+		}
+
+		&:hover {
+			cursor: pointer;
+			i {
+				color: #fff;
+				transition: .3s;
+			}
+		}
+	}
+}
+
+.mobile {
+	position: fixed;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: transform .6s;
+	background: #2e384c;
+	z-index: 100;
+	width: 200px;
+	padding: 0 20px;
+
+	.icon-close {
+		position: absolute;
+		right: 20px;
+		top: 20px;
+		font-size: 26px;
+	}
+
+	.leftnav,
+	.button-popup {
+		display: block!important;
+	}
+	.search {
+		display: flex!important;
+	}
+}
+
+.animate {
+	transform: translate3d(-242px,0,0);
+}
+
+#cart a.leftnav__item {
+	display: block;
+}

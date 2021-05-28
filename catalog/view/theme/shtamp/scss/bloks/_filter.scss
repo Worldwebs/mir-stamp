@@ -1,0 +1,78 @@
+.mfilter-content_top {
+	margin-bottom: 0;
+	position: relative;
+	max-width: 580px;
+	z-index: 1;
+	top: 35px;
+	@include llg-block {
+		margin-bottom: 20px;
+		max-width: 100%;
+		top: 0;
+	}
+
+	.mfilter-tb-as-td.mfilter-col-input {
+		display: none;
+	}
+
+	.box-content {
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+	}
+
+	.mfilter-opts-container {
+		padding: 0;
+	}
+
+	.mfilter-heading-text > span {
+		padding: 0;
+	}
+
+	.mfilter-tb-as-td {
+		padding: 0;
+	}
+
+	.mfilter-heading-content {
+		padding: 7px 0 7px 8px;
+		@include xs-block {
+			padding: 7px 0;
+		}
+	}
+
+	.mfilter-heading-text {
+		margin-left: 0;
+	}
+
+	.mfilter-content > ul > li {
+		display: flex;
+		align-items: center;
+		border-top: 0;
+		@include xs-block {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.mfilter-tb .mfilter-tb {
+		margin: 0 10px 0 0;
+	}
+
+	.mfilter-content > ul > li .mfilter-heading {
+		border: 0;
+		font-size: 16px;
+		min-width: unset;
+		width: unset;
+		display: block;
+		background-color: transparent;
+	}
+
+	.mfilter-tb .mfilter-tb {
+		background-color: transparent;
+	}
+
+	.mfilter-filter-item .mfilter-options {
+		@include xs-block {
+			padding: 0;
+		}
+	}
+}

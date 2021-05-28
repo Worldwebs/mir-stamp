@@ -1,0 +1,55 @@
+.search-group-input {
+	@include row-flex();
+	align-items: center;
+	margin-bottom: 20px;
+	@include xs(flex-direction, column);
+	@include xs(margin-bottom, 0);
+
+	&__item {
+		@include col();
+		@include size(3);
+		@include size-lg(4);
+		@include size-xs(12);
+		@include xs(margin-bottom, 20px);
+	}
+}
+
+.product-search #button-search {
+	@include xs-block {
+		margin: 0 auto;
+		margin-top: 20px;
+    display: block;
+    width: 100%;    
+	}
+}
+
+.search-h2 {
+	margin: 20px 0;
+}
+
+.checkbox-inline--search {
+	margin-right: 20px;
+}
+
+.sortirovka {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 30px;
+	@include xs(flex-direction, column);
+
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-left: 15px;
+		@include xs-block {
+			margin-bottom: 10px;
+			flex-direction: column;
+			align-items: unset;
+			margin-left: 0;
+		}
+
+		label {
+			margin-right: 10px;
+		}
+	}
+}

@@ -1,0 +1,29 @@
+.breadcrumb {
+	padding-left: 10px;
+	font-size: 12px;
+	color: #364156;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	font-family: "Open Sans", san-serif;
+	margin-bottom: 14px;
+
+	&-center {
+		justify-content: center;
+		padding-left: 0;
+	}
+
+	&__item {
+		a {
+			color: #364156;
+		}
+		i {
+			color: #f1634b;
+			margin: .3125em;
+		}
+	}
+
+	&__item:last-child i {
+		display: none;
+	}
+}
